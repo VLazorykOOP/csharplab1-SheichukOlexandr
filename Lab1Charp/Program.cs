@@ -27,6 +27,8 @@ class Program
             Console.Write("Оберiть завдання: ");
             choice = int.Parse(Console.ReadLine());
 
+            Console.Clear(); // Очищаємо консоль після вибору завдання
+
             switch (choice)
             {
                 case 1:
@@ -71,7 +73,7 @@ class Program
         double r2 = double.Parse(Console.ReadLine());
 
         double area = Math.PI * (r2 * r2 - r1 * r1);
-        Console.WriteLine($"Площа кiльця з внутрiшнім радiусом {r1} i зовнiшнiм радiусом {r2} дорiвнює {area}");
+        Console.WriteLine($"Площа кiльця з внутрiшнiм радiусом {r1} i зовнiшнiм радiусом {r2} дорiвнює {area}");
     }
 
     static void CheckTriangleExistence()
