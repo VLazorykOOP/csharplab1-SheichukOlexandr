@@ -10,12 +10,12 @@ class Program
 
     {
         Console.WriteLine("Натиснiть будь-яку кнопку для вiдображення меню...");
-        Console.ReadKey(true); // Очікуємо натискання будь-якої кнопки
+        Console.ReadKey(true); 
         int choice;
 
         do
         {
-            Console.Clear(); // Очищаємо консоль перед виведенням нового меню
+            Console.Clear(); 
             Console.WriteLine("Меню вибору:");
             Console.WriteLine("1. Обчислення площi кiльця");
             Console.WriteLine("2. Визначення iснування трикутника");
@@ -27,7 +27,7 @@ class Program
             Console.Write("Оберiть завдання: ");
             choice = int.Parse(Console.ReadLine());
 
-            Console.Clear(); // Очищаємо консоль після вибору завдання
+            Console.Clear(); 
 
             switch (choice)
             {
@@ -56,7 +56,7 @@ class Program
                     break;
             }
 
-            if (choice != 0) // Чекаємо натискання кнопки, якщо користувач не вибрав "Вихід"
+            if (choice != 0) 
             {
                 Console.WriteLine("\nНатиснiть будь-яку кнопку для продовження...");
                 Console.ReadKey(true);
