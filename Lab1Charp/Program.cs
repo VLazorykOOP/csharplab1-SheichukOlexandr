@@ -22,6 +22,7 @@ class Program
             Console.WriteLine("3. Визначення положення точки в системi координат");
             Console.WriteLine("4. Визначення максимальноi швидкостi транспортного засобу");
             Console.WriteLine("5. Пiднесення числа до кубу");
+            Console.WriteLine("6. Обчислення виразу");
             Console.WriteLine("0. Вихiд");
             Console.Write("Оберiть завдання: ");
             choice = int.Parse(Console.ReadLine());
@@ -42,6 +43,9 @@ class Program
                     break;
                 case 5:
                     CubeFunction();
+                    break;
+                case 6:
+                    CalculatingAnExpression();
                     break;
                 case 0:
                     break;
@@ -151,5 +155,20 @@ class Program
     static int Cube(int num)
     {
         return num * num * num;
+    }
+
+    static void CalculatingAnExpression()
+    {
+        // Введення значень з клавіатури
+        Console.Write("Введiть значення x: ");
+        double x = double.Parse(Console.ReadLine());
+        Console.Write("Введiть значення y: ");
+        double y = double.Parse(Console.ReadLine());
+
+        // Обчислення значення виразу
+        double result = (1 / (x * y) + 1 / (Math.Pow(x, 2) + 1)) * (x + y);
+
+        // Виведення результату на екран
+        Console.WriteLine("Значення виразу: " + result);
     }
 }
